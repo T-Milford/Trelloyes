@@ -1,12 +1,14 @@
 import React from 'react';
 import List from './List.js'
+import STORE from './Store.js'
 
-function App(store) {
-    const storeLists = store.lists.map(list =>
+function App(STORE) {
+    console.log(STORE);
+    const storeLists = STORE.lists.map(list => (
         <List >
-            ${list}
+            {list}
         </List>
-      );
+      ));
 
     return storeLists;
 }

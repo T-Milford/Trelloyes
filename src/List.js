@@ -1,14 +1,14 @@
 // import App from "./App";
 import React from 'react';
 
-export default function list (header, cards) {
+export default function List (props) {
     return (
         <section className='List'>
             <header className="header">
-                ${header}
+                {props.header}
             </header>
             <div className="List-cards">
-                ${cards}
+                {props.cardIds}
             </div>
         </section>
     )
