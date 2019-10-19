@@ -2,12 +2,9 @@ import React from 'react';
 import List from './List.js'
 import STORE from './Store.js'
 
-function App(STORE) {
-    console.log(STORE);
+function App() {
     const storeLists = STORE.lists.map(list => (
-        <List >
-            {list}
-        </List>
+        <List header={list.header} cardIds = {list.cardIds} />   
       ));
 
     return storeLists;

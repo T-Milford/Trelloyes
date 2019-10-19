@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Card ({title, content}) {
+export default function Card ({title, content}) {
     return (
         <div className='card'>
             <h3>{title}</h3>
