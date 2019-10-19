@@ -1,6 +1,6 @@
 // import App from "./App";
 import React from 'react';
-import Card from './Card';
+import Card from './Card.js';
 import STORE from './Store.js';
 
 // this is run by App to display lists from items in STORE's "list" key
@@ -14,13 +14,15 @@ export default function List (props) {
                 {props.header}
             </header>
             <div className="Card-content">
-                props.cardIds.map(letter => 
+                {props.cardIds.map(letter => {
                     const specificCard = STORE.allCards.letter;
-                    <Card 
-                        title={specificCard.title} 
-                        content={specificCard.content}
-                    />
-                )
+                    return (
+                        <Card 
+                            title={specificCard.title} 
+                            content={specificCard.content}
+                        />
+                    )
+                })}
             </div>
         </section>
     )
